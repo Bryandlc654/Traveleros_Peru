@@ -622,4 +622,242 @@ button:focus {
   cursor: pointer;
 }
 
+/* this card is inspired form this - https://georgefrancis.dev/ */
+.card__services {
+  --border-radius: 0.75rem;
+  --primary-color: #ff955d;
+  --secondary-color: #130830;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  background: #ffffff;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.107);
+  position: relative;
+  margin: 0 auto;
+  border: 1px solid rgba(110, 107, 128, 0.2274509804);
+}
+.card__services > * + * {
+  margin-top: 1.1em;
+}
+
+.card__content {
+  color: var(--secondary-color);
+  font-size: 0.86rem;
+}
+
+.card__title {
+  padding: 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.card__title span {
+  margin-right: 1rem;
+  color: #ff955d;
+  font-size: 1.5rem;
+}
+
+.card__title .text__active {
+  color: #ffffff;
+}
+
+.card__date {
+  color: #6e6b80;
+  font-size: 0.8rem;
+}
+
+.card__arrow {
+  position: absolute;
+  background: var(--primary-color);
+  padding: 0.4rem;
+  border-top-left-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  bottom: 0;
+  right: 0;
+  transition: 0.2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card svg {
+  transition: 0.25s;
+}
+
+/* hover */
+.card__services:hover .card__title {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+.card__services:hover .card__arrow {
+  background: rgb(11, 5, 5);
+}
+
+.card__services:hover .card__arrow svg {
+  transform: translateX(3px);
+}
+
+.card--testimonios {
+  max-width: 30rem;
+  height: 274px;
+  background: white;
+  padding: 0.4em;
+  border-radius: 6px;
+  border: 1px solid rgba(110, 107, 128, 0.2352941176);
+  box-shadow: -3px 0px 40px 0px rgba(89, 89, 89, 0.13);
+}
+
+.card-image--testimonios {
+  background-color: rgb(236, 236, 236);
+  background-image: url("https://elcomercio.pe/resizer/g1XiOQReeuWPOSuy-PXG_CJ1B4I=/1200x800/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/G3V23OZOLVE6ZGO6QQ7DUSBSXU.jpg");
+  background-size: cover;
+  object-fit: cover;
+  width: 100%;
+  height: 60%;
+  border-radius: 6px 6px 0 0;
+}
+
+.card-image--testimonios:hover {
+  transform: scale(0.98);
+}
+
+.category--testimonios {
+  text-transform: uppercase;
+  font-size: 0.7em;
+  font-weight: 600;
+  color: rgb(63, 121, 230);
+  padding: 10px 7px 0;
+}
+
+.category--testimonios:hover {
+  cursor: pointer;
+}
+
+.heading--testimonios {
+  font-weight: 600;
+  color: rgb(88, 87, 87);
+  padding: 7px;
+}
+
+.heading--testimonios:hover {
+  cursor: pointer;
+}
+
+.author {
+  color: gray;
+  font-weight: 400;
+  font-size: 11px;
+  padding-top: 20px;
+}
+
+.name {
+  font-weight: 600;
+}
+
+.name:hover {
+  cursor: pointer;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.list--header {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem);
+  background-color: var(--secondary-theme-color);
+  transform: translateX(var(--translate-list-header));
+  transition: transform 0.25s;
+}
+.list__link {
+  position: relative;
+  color: var(--primary-text-color);
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.25s;
+}
+.list__link:hover {
+  color: var(--secondary-text-color);
+}
+.list__link::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.125rem;
+  width: 0;
+  height: 0.0625rem;
+  background-color: var(--secondary-text-color);
+  transition: width 0.25s;
+}
+.list__link:hover::before {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .list--header {
+    position: static;
+    background-color: transparent;
+    width: auto;
+    height: auto;
+  }
+}
+.section {
+  padding: 5rem 0 5rem;
+}
+.section__title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 1rem 0;
+}
+.section--container__separator {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.section--separator--title {
+  width: 10rem;
+  height: 0.5rem;
+  background-color: var(--secondary-theme-color);
+  margin: 0;
+  border: none;
+}
+.section__subtitle {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+.text-dark {
+  color: #fff;
+}
+
+.bg-dark {
+  background-color: #130830;
+  color: #ffffff;
+}
+
+.bg_active {
+  background-color: #ff955d;
+  color: #fff;
+}
+
+.bg_active:hover {
+  background-color: #130830;
+}
+
+.w-100 {
+  max-width: 30rem;
+}
+
+.pd-sm {
+  padding: 0 1rem 0 0;
+}
+
 /*# sourceMappingURL=fe.css.map */
