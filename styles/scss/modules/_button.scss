@@ -10,6 +10,10 @@
   font-weight: 500;
   margin: 0.5rem 0;
   font-family: inherit;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .add-btn:hover {
@@ -40,9 +44,7 @@
   border-bottom-left-radius: 2px;
 }
 
-.icon-btn:focus {
-  outline: none;
-}
+
 
 .btn-txt {
   opacity: 0;
@@ -96,12 +98,7 @@
 }
 
 
-.input-group {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-}
+
 
 .input {
   min-height: 50px;
@@ -114,6 +111,12 @@
   background-color: #fff;
   box-shadow:  3px 3px 0px rgb(0, 0,0, 0.28);
 
+  &-group {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .button--submit {
@@ -128,12 +131,14 @@
   cursor: pointer;
   box-shadow:  3px 3px 0px rgb(0, 0,0, 0.28);
   transition: all 0.25s;
+
+  &:hover {
+    border-radius: 0;
+    background: rgb(255,36,73);
+    background: linear-gradient(0deg,  rgba(255,91,46,1) ,15%, rgba(255,91,46,1));
+  }
 }
-.button--submit:hover {
-  border-radius: 0;
-  background: rgb(255,36,73);
-  background: linear-gradient(0deg,  rgba(255,91,46,1) ,15%, rgba(255,91,46,1));
-}
+
 
 .input:focus, .input:focus-visible {
   outline: none;
