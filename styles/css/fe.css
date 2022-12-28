@@ -809,7 +809,7 @@ button:focus {
   }
 }
 .section {
-  padding: 5rem 0 5rem;
+  padding: 5rem 0 2rem;
 }
 .section__title {
   font-size: 2rem;
@@ -873,6 +873,9 @@ button:focus {
   margin: 0.5rem 0;
   font-family: inherit;
 }
+.icon-btn:focus {
+  outline: none;
+}
 
 .add-btn:hover {
   width: 120px;
@@ -900,10 +903,6 @@ button:focus {
   left: 14px;
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
-}
-
-.icon-btn:focus {
-  outline: none;
 }
 
 .btn-txt {
@@ -957,13 +956,6 @@ button:focus {
   top: calc(50% - 2px);
 }
 
-.input-group {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-}
-
 .input {
   min-height: 50px;
   width: 60%;
@@ -974,6 +966,12 @@ button:focus {
   border-radius: 6px 0 0 6px;
   background-color: #fff;
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.28);
+}
+.input-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
 }
 
 .button--submit {
@@ -989,7 +987,6 @@ button:focus {
   box-shadow: 3px 3px 0px rgba(0, 0, 0, 0.28);
   transition: all 0.25s;
 }
-
 .button--submit:hover {
   border-radius: 0;
   background: rgb(255, 36, 73);
